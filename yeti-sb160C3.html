@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bikepedia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="navsystem">
+
+  <div class="search-container">
+    <input type="text" id="search" placeholder="Search..." onkeydown="goSearch(event)">
+    <i class="fa fa-search" onclick="goSearchClick()"></i>
+  </div>
+<h1 class="home">Bikepedia</h1>
+  <nav class="navbar">
+    <a class="nav" href="index.html">Home</a>
+    <a class="nav" href="bikes.html">Bikes</a>
+	<a class="nav" href="parts.html">Parts</a>
+  </nav>
+</div>
+
+<p> Yeti SB160 C3 </p>
+<hr>
+<img class="scale" src="images/yetisb160C3.jpg" alt="Yeti">
+
+<script>
+function goSearch(event) {
+  if (event.key === "Enter") {
+    var q = document.getElementById("search").value;
+    window.location.href = "bikes.html?q=" + q;
+  }
+}
+
+function goSearchClick() {
+  var q = document.getElementById("search").value;
+  window.location.href = "bikes.html?q=" + q;
+}
+</script>
+
+</body>
+</html>

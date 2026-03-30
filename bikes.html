@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bikes - Bikepedia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="navsystem">
+  <div class="search-container">
+    <input type="text" id="search" placeholder="Search..." oninput="search()">
+    <i class="fa fa-search"></i>
+  </div>
+<h1 class="home">Bikepedia</h1>
+  <nav class="navbar">
+    <a class="nav" href="index.html">Home</a>
+    <a class="nav" href="bikes.html">Bikes</a>
+	<a class="nav" href="parts.html">Parts</a>
+  </nav>
+</div>
+
+
+<div class="content">
+  <h2 class="blue">All Bikes</h2>
+  <hr>
+</div>
+
+
+<div id="bikelist">
+
+   <a class="bike-card" href="yeti-sb160C2.html" style="background-image: url('images/yetisb160C2.jpg');">
+    <div class="bike-text">Yeti SB160 C2<br>$14,140</div>
+ 
+  <a class="bike-card" href="yeti-sb160C3.html" style="background-image: url('images/yetisb160C3.jpg');">
+    <div class="bike-text">Yeti SB160 C3<br>$14,600</div>
+  </a>
+
+  <a class="bike-card" href="yeti-sb160T1.html" style="background-image: url('images/yetisb160T1.jpg');">
+    <div class="bike-text">Yeti SB160 T1<br>$16,500</div>
+  </a>
+
+  <a class="bike-card" href="yeti-sb160T2.html" style="background-image: url('images/yetisb160T2.jpg');">
+    <div class="bike-text">Yeti SB160 T2<br>$17,140</div>
+  </a>
+
+  <a class="bike-card" href="yeti-sb160T3.html" style="background-image: url('images/yetisb160T3.jpg');">
+    <div class="bike-text">Yeti SB160 T3<br>$20,950</div>
+  </a>
+
+  <a class="bike-card" href="yeti-sb160T4.html" style="background-image: url('images/yetisb160T4.jpg');">
+    <div class="bike-text">Yeti SB160 T4<br>$23,960</div>
+  </a>
+
+  <a class="bike-card" href="specialized-demorace.html" style="background-image: url('images/demorace.jpg');">
+    <div class="bike-text">Specialized Demo Race<br>$12,500</div>
+  </a>
+
+  <a class="bike-card" href="canyon-sendercfr.html" style="background-image: url('images/sendercfr.jpg');">
+    <div class="bike-text">Canyon Sender CFR<br>$10,249</div>
+  </a>
+
+</div>
+
+<hr>
+
+<script>
+function search() {
+  var input = document.getElementById("search").value.toLowerCase();
+  var bikes = document.getElementsByClassName("bike-card");
+
+  for (var i = 0; i < bikes.length; i++) {
+    if (bikes[i].innerText.toLowerCase().includes(input)) {
+      bikes[i].style.display = "flex";
+    } else {
+      bikes[i].style.display = "none";
+    }
+  }
+}
+
+
+var params = new URLSearchParams(window.location.search);
+if (params.get("q")) {
+  document.getElementById("search").value = params.get("q");
+  search();
+}
+</script>
+
+</body>
+</html>

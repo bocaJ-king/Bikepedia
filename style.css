@@ -1,0 +1,135 @@
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+
+.content {
+  padding: 20px;
+}
+
+.home {
+    position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 24px;
+  color: #30364F;
+}
+
+.navsystem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ACBAC4;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+}
+
+
+.navbar {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+
+.nav {
+  width: 120px;
+  height: 40px;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ACBAC4;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+
+#bikelist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+
+.bike-card {
+  position: relative;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.bike-card:hover {
+  transform: scale(1.03);
+}
+
+
+.bike-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+
+.bike-text {
+  position: relative;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.blue {
+	color:#30364F;
+	
+}
+
+.head {
+color:#30364F;
+font-size:100px;
+text-align:center;
+}
+
+p {
+	text-align:center;
+	color:#30364F;
+	font-weight:bold;
+	font-size:20px;
+}
+
+.scale {
+	width:500px;
+	height:auto;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
